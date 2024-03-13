@@ -1,14 +1,23 @@
-import { useState } from "react";
-import { Outlet } from "react-router";
 
-function App() {
-  const [count, setCount] = useState(0);
+import { Route, Routes } from 'react-router-dom';
+import Menu from './pages/Menu';
+import Headerbar from './components/Headerbar';
+import LandingPage from './pages/LandingPage';
 
+export default function App() {
   return (
     <>
-      <p>haii</p>
+      <Headerbar />
+      <Routes>
+        <Route
+          path="/"
+          element={<LandingPage />}
+        />
+        <Route
+          path="/menu"
+          element={<Menu />}
+        />
+      </Routes>
     </>
   );
 }
-
-export default App;
