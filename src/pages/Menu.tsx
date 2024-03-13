@@ -1,16 +1,44 @@
-import { Button, Flex, Heading, Text } from '@chakra-ui/react';
+import {
+  Button,
+  Card,
+  CardBody,
+  Flex,
+  Heading,
+  SimpleGrid,
+  Text,
+} from '@chakra-ui/react';
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 export default function MenuPage() {
   return (
     <Flex
-      alignItems="center"
-      justifyContent="center"
+      direction="column"
+      p={8}
       h="100dvh"
       w="100%"
+      gap="8"
     >
-      <Text fontSize="2xl">Menu</Text>
+      <Heading
+        as="h2"
+        size="2xl"
+      >
+        Product List
+      </Heading>
+      <SimpleGrid
+        columns={4}
+        spacing={10}
+      >
+        <Card>
+          <CardBody>
+            <Text
+              fontSize="xl"
+              fontWeight="bold"
+            >
+              Technical Interview
+            </Text>
+          </CardBody>
+        </Card>
+      </SimpleGrid>
     </Flex>
   );
 }
