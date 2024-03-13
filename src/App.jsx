@@ -1,13 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
-import Homepage from './pages/Homepage';
+import Menu from './pages/Menu';
+import Headerbar from './components/Headerbar';
 
 export default function App() {
   return (
     <>
+      <Headerbar />
       <Routes>
         <Route
-          path="/homepage"
-          element={<Homepage />}
+          path="/menu"
+          element={<Menu />}
         />
       </Routes>
     </>
