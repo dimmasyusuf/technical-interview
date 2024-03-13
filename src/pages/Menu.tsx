@@ -8,6 +8,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import React from 'react';
+import CardList from '../components/CardList';
 
 export default function MenuPage() {
   return (
@@ -24,21 +25,8 @@ export default function MenuPage() {
       >
         Product List
       </Heading>
-      <SimpleGrid
-        columns={4}
-        spacing={10}
-      >
-        <Card>
-          <CardBody>
-            <Text
-              fontSize="xl"
-              fontWeight="bold"
-            >
-              Technical Interview
-            </Text>
-          </CardBody>
-        </Card>
-      </SimpleGrid>
+      
+      <CardList />
     </Flex>
   );
 }
